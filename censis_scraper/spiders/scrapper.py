@@ -72,14 +72,14 @@ class ScrapperSpider(scrapy.Spider):
                 
 
         date = str(datetime.datetime.now())[:19]
-        mail = 'censisscraper@gmail.com'
-        password = 'Censis_1000'
+        mail = 'sample@gmail.com'
+        password = '########'
 
         msg = EmailMessage()
         msg['Subject'] = f'data scraped on {date}'
         msg['From'] =  mail
         # add emails to recipient list. 'sample@censis.com, sample2@censis.com'
-        msg['To'] = 'matt.henley@censis.com. jim.suruda@censis.com'
+        msg['To'] = 'sample@censis.com, sample2@censis.com'
         msg.set_content = 'see attachment'
 
         with open('domains.csv','rb') as file:
